@@ -4,35 +4,38 @@
 //
 // See the LICENSE.txt file included with this software for license information.
 
-#include "CommandBounds.h"
+// #include "CommandBounds.h"
 #include "CommandList.h"
-#include "CommandSketch.h"
-#include "CommandFind.h"
-#include "CommandDistance.h"
-#include "CommandScreen.h"
-#include "CommandTriangle.h"
-#include "CommandContain.h"
-#include "CommandInfo.h"
-#include "CommandPaste.h"
+#include "CommandSize.h"
+// #include "CommandSketch.h"
+// #include "CommandSize.h"
+// #include "CommandFind.h"
+// #include "CommandDistance.h"
+// #include "CommandScreen.h"
+// #include "CommandTriangle.h"
+// #include "CommandContain.h"
+// #include "CommandInfo.h"
+// #include "CommandPaste.h"
 
 int main(int argc, const char ** argv)
 {
     mash::CommandList commandList("mash");
     
-    commandList.addCommand(new mash::CommandSketch());
+    commandList.addCommand(new mash::CommandSize());
+    // commandList.addCommand(new mash::CommandSketch());
     //commandList.addCommand(new CommandFind());
-    commandList.addCommand(new mash::CommandDistance());
-    commandList.addCommand(new mash::CommandScreen());
-    commandList.addCommand(new mash::CommandTriangle());
-#ifdef COMMAND_WITHIN
-    commandList.addCommand(new mash::CommandContain());
-#endif
-#ifdef COMMAND_FIND
-	commandList.addCommand(new mash::CommandFind());
-#endif
-    commandList.addCommand(new mash::CommandInfo());
-    commandList.addCommand(new mash::CommandPaste());
-    commandList.addCommand(new mash::CommandBounds());
+    // commandList.addCommand(new mash::CommandDistance());
+    // commandList.addCommand(new mash::CommandScreen());
+    // commandList.addCommand(new mash::CommandTriangle());
+// #ifdef COMMAND_WITHIN
+    // commandList.addCommand(new mash::CommandContain());
+// #endif
+// #ifdef COMMAND_FIND
+	// commandList.addCommand(new mash::CommandFind());
+// #endif
+    // commandList.addCommand(new mash::CommandInfo());
+    // commandList.addCommand(new mash::CommandPaste());
+    // commandList.addCommand(new mash::CommandBounds());
     
     return commandList.run(argc, argv);
 }

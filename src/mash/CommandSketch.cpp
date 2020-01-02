@@ -49,6 +49,10 @@ int CommandSketch::run() const
     {
     	return 1;
     }
+
+    cerr << "minHashesPerWindow: " << parameters.minHashesPerWindow << endl;
+    cerr << "memoryBound: " << parameters.memoryBound << endl;
+    cerr << "targetCov: " << parameters.targetCov << endl;
     
     for ( int i = 0; i < arguments.size(); i++ )
     {

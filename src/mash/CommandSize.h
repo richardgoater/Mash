@@ -4,14 +4,22 @@
 //
 // See the LICENSE.txt file included with this software for license information.
 
-#include <string.h>
+#ifndef INCLUDED_CommandSize
+#define INCLUDED_CommandSize
 
-__asm__(".symver memcpy,memcpy@GLIBC_2.2.5");
+#include "Command.h"
 
-extern "C"
+namespace mash {
+
+class CommandSize : public Command
 {
-void *__wrap_memcpy(void *dest, const void *src, size_t n)
-{
-    return memcpy(dest, src, n);
-}
-}
+public:
+
+    CommandSize();
+    
+    int run() const; // override
+};
+
+} // namespace mash
+
+#endif
