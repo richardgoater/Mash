@@ -19,12 +19,12 @@ AC_ARG_WITH(boost, [  --with-boost=<path/to/boost>     Boost Library install dir
 
 AC_LANG(C++)
 
-#AC_CHECK_HEADER(zlib.h, [result=1], [result=0])
+AC_CHECK_HEADER(zlib.h, [result=1], [result=0])
 
-#if test $result == 0
-#then
-#	AC_MSG_ERROR([Zlib not found.])
-#fi
+if test $result == 0
+then
+	AC_MSG_ERROR([Zlib not found.])
+fi
 
 AC_CHECK_PROG(capnpCheck, capnp, "yes", "no", $with_capnp/bin)
 

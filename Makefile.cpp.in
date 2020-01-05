@@ -1,5 +1,5 @@
 CXXFLAGS += -O3 -std=c++14 -Isrc -I@capnp@/include
-CPPFLAGS += @amcppflags@
+# CPPFLAGS += @amcppflags@
 
 UNAME_S=$(shell uname -s)
 
